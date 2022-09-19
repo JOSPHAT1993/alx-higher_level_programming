@@ -1,21 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 /**
- * check_cycle-main function to check cycles in singly li
- *
- * @list:'Linked list elements'
- *
- * Return:0 if no cycle, 1 if a cycle exist
+ * check_cycle - checks for cycles in loop
+ * @list: list to take in
+ * Return: integer value
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *current = list;
-	listint_t *temp = list;
+	listint_t *first, *second;
 
-	while (temp && temp->next)
+	first = list;
+	second = list;
+	while (first != NULL && second != NULL)
 	{
-		current = current->next;
-		temp = temp->next->next;
-		if (current == temp)
+		first = first->next;
+		if (second->next)
+			second = second->next->next;
+
+		if (first == second)
 			return (1);
 	}
 	return (0);
