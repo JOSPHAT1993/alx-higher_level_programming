@@ -2,7 +2,7 @@
 def multiple_returns(sentence):
     count = 0
     if sentence == ():
-        print("None")
+        return None
     else:
         for i in sentence:
             first = sentence[0]
