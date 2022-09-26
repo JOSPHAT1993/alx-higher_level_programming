@@ -1,38 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 /**
- * palindrome-main function to check for palidrome
- *
- * @left:'head of singly list'
- * @right:'tail of a singly list'
- *
- * Return:0 if not palidrom, 1 if it is
- */
-int palindrome(listint_t **left, listint_t right)
-{
-	int isPalidrome;
-
-	if (right == NULL)
-	{
-		return (1);
-	}
-
-	isPalidrome = (palidrome(left, right->next) && (*left)->n == right->n);
-	*left = (*left)->next;
-
-	return (isPalidrome);
-}
-
-/**
- * is_palindrome-function to check for palidrome
- *
- * @head:'singly list head'
- *
- * Return:0 if not palidrom, 1 if palidrome
+ * is_palindrome - checks for list is palindrome
+ * @head: head of linked list
+ * Return:  boolean
  */
 int is_palindrome(listint_t **head)
 {
-	if (!(*head) || !head)
-		return (1);
+	int len = 0, i = 0;
+	listint_t *tmp;
+	int Ns[10000];
 
-	return (palidrome(head, *head));
+	tmp = *head;
+	if ((*head) == NULL)
+		return (1);
+	while (tmp != NULL)
+	{
+		len++;
+		tmp = tmp->next;
+	}
+	if (len == 1)
+		return (1);
+	tmp = *head;
+	while (tmp != NULL)
+	{
+		Ns[i] = tmp->n;
+		tmp = tmp->next;
+		i++;
+	}
+	for (i = 0; i <= len / 2; i++)
+	{
+		if (Ns[i] != Ns[len - i - 1])
+		{
+			return (0);
+		}
+	}
+	return (1);
 }
