@@ -10,4 +10,5 @@ class Square:
     args:
         __size(int): size of the square
     """
-print(Square(0))
+obj = Square(0)
+print(obj)
