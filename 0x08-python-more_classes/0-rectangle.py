@@ -12,7 +12,3 @@ class Rectangle:
     """
     def __init__(self):
         pass
-
-
-obj = Rectangle()
-print(obj)
