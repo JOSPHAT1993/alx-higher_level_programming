@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """0-rectangle
 
-    create an empty class.
+    Empty Rectangle class.
 """
 
 
