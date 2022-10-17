@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""3-rectangle
+"""4-rectangle
 
 Todo:
-    creating class Rectangle.
-    Creating private instance width, getters and setters.
-    Creating private instance height, getters and setters.
-    Finding Area and Perimeter.
+    create private instance width, getter and setter
+    create provate instance height, getter and setter
+    return area of rectangle.
+    return perimeter of the rectangle.
+    print perimeter in strings instead of values
 """
 
 
 class Rectangle:
-    """Rectangle Class"""
+    """Rectangle class
+    """
     def __init__(self, width=0, height=0):
-        """Class Constructor"""
+        """class constructor"""
         self.width = width
         self.height = height
 
@@ -45,18 +47,21 @@ class Rectangle:
         self.__width = value
 
     def area(self):
-        """Area calculation"""
+        """return area"""
         return (self.width * self.height)
 
     def perimeter(self):
-        """Perimeter Calculation"""
-        if self.width == 0 or self.height == 0:
+        """return perimeter of rect"""
+        if (self.width == 0 or self.height == 0):
             return 0
         return (2 * (self.width + self.height))
 
     def __str__(self):
-        """prints alternate values for perimeter
-        """
+        """modifies string obj"""
         if not self.perimeter():
             return ""
-        return ('\n'.join('#' * self.width for x in range(self.height)))
+        return ('\n'.join('#' * self.width for i in range(self.height)))
+
+    def __repr__(self):
+        """modifies repr obj"""
+        return ("Rectangle({}, {})".format(self.width, self.height))
