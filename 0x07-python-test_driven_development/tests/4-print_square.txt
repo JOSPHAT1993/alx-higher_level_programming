@@ -1,0 +1,58 @@
+===================
+using print_square
+===================
+
+This function prints a square with the character #
+paramerer size is the size length of the square
+
+Import `print_square` from `4-print_square.py`:
+    >>> print_square = __import__('4-print_square').print_square
+
+Numbers
+=======
+
+size 3:
+    >>> print_square(3)
+    ###
+    ###
+    ###
+
+size 10:
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+size Float:
+    >>> print_square(5.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+size negative:
+    >>> print_square(-32)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Non-Number
+==========
+
+size bool:
+    >>> print_square(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+size string:
+    >>> print_square("4")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
