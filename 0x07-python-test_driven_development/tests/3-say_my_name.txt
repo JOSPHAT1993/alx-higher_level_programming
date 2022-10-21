@@ -1,0 +1,36 @@
+==================
+using say_my_name
+==================
+
+This function prints `My name is <first name> <last name>`
+Parameter first_name is a first string for print
+Paramerer last_name is a second string for print (OPTIONAL)
+
+Import `say_my_name` from the file `3-say_my_name.py`:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Strings
+========
+
+Two strings:
+    >>> say_my_name("Darth", "Vader")
+    My name is Darth Vader
+
+One string:
+    >>> say_my_name("Galactus")
+    My name is Galactus 
+
+Numbers
+========
+
+first_name number:
+    >>> say_my_name(12)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+last_name number:
+    >>> say_my_name("Bob", 100)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
