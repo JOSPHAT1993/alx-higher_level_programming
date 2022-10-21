@@ -1,0 +1,35 @@
+=======================
+using text_indentation
+=======================
+
+This function prints a text with 2 new lines after each of these characters: `.`, `?` and `:`
+Parameter text must be a string
+
+Import `text_indentation` from `5-text_indentation.py`:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Numbers
+=======
+
+Number in text:
+    >>> text_indentation(87)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Non-Number
+==========
+
+short text:
+    >>> text_indentation("Hola. Como estas? Bien")
+    Hola.
+    <BLANKLINE>
+    Como estas?
+    <BLANKLINE>
+    Bien
+
+Bool in text:
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
