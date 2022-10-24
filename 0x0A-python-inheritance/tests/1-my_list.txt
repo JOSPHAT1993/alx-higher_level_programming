@@ -1,22 +1,30 @@
-==============
-1-my_list.txt
-==============
+#1-my_list.txt
+Using 'MyList'
 
-Import Mylist class file from 1-my_list.py file:
-	>>>MyList = __import__(1-my_list').MyList
-
-Instantiate MyList:
-	>>>lst = MyList()
-
-Append lst:
-	>>>lst.append(8)
-
-Other appending:
-	>>>lst.append(7)
-
-other append:
-	>>>lst.append(9)
-
-use print_sorted function:
-	>>>lst.print_sorted()
-	[7, 8, 9]
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(-3)
+>>> my_list.append()
+Traceback (most recent call last):
+TypeError: append() takes exactly one argument (0 given)
+>>> my_list.print_sorted()
+[-3, 1, 2, 3]
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+>>> my_list.append(-4)
+>>> my_list.append(-5)
+>>> my_list.append(-6)
+>>> my_list.append(1000)
+>>> my_list.append(-1000)
+>>> my_list.append(5000)
+>>> my_list.append(-1)
+>>> my_list.print_sorted()
+[-1000, -6, -5, -4, -1, 1000, 5000]
