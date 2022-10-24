@@ -6,11 +6,6 @@ Todo:
     prints sorted values in the list
 """
 class MyList(list):
-    """MyList class"""
+    """prints a sorted list"""
     def print_sorted(self):
-        """print_sorted method
-
-        Return:
-            a sorted list
-        """
         print(sorted(self))

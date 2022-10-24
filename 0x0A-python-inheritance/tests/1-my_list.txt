@@ -1,8 +1,6 @@
----------------
----------------
+==============
 1-my_list.txt
----------------
----------------
+==============
 
 Import Mylist class file from 1-my_list.py file:
 	>>>MyList = __import__(1-my_list').MyList
