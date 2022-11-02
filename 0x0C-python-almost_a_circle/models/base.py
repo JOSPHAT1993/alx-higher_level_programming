@@ -18,5 +18,3 @@ class Base:
         else:
             Base._nb_objects += 1
             self.id = Base._nb_objects
-
-
