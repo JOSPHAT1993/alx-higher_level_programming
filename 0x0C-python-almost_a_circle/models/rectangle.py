@@ -78,4 +78,4 @@ class Rectangle(Base):
 
     def display(self):
         """displays rectangle using # chars"""
-        return ('\n'.join('#' * self.width for x in range(self.height)))
+        print('\n'.join('#' * self.width for x in range(self.height)))
