@@ -35,3 +35,8 @@ class Base:
             jsons = '[]'
         with open(cls.__name__+'.json', 'w', encoding='utf-8') as f:
             f.write(jsons)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns list of jsons"""
+        return json.loads(json_string or "[]")
