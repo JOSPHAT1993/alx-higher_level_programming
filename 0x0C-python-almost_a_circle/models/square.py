@@ -39,3 +39,15 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """dictionary"""
+        dic = {'id': self.id, 'size': self.size,
+               'x': self.x, 'y': self.y}
+        return dic
+
+    def __str__(self):
+        """gets rectangle"""
+        return "[{}] ({}) {}/{} - {}".format(
+            type(self).__name__, self.id, self.x, self.y,
+            self.size)
