@@ -18,3 +18,8 @@ class Base:
         else:
             Base._nb_objects += 1
             self.id = Base._nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns json string"""
+        return json.dumps(list_dictionaries or [])
