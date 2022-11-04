@@ -5,6 +5,8 @@ Todo:
     define a private class attribute nbobjects
     initialize the class with init method
 """
+import json
+import os.path
 
 
 class Base:
