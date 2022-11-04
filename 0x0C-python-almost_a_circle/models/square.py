@@ -30,7 +30,7 @@ class Square(Rectangle):
         """assigning attributes"""
         if args:
             i = 0
-            keys = ['id', 'width', 'x', 'y']
+            keys = ['id', 'size', 'x', 'y']
 
             for arg in args:
                 setattr(self, keys[i], args)
