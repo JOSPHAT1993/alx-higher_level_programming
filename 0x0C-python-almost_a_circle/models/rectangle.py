@@ -13,61 +13,65 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """class contructor"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
-        def validation_method(self, name, value):
-            """validates the getters and setter methods"""
-            if not isinstance(value, int):
-                raise TypeError("{} must be an integer".format(name))
-            if ((name is "width") or (name is "height")) and value <= 0:
-                raise ValueError("{} must be > 0".format(name))
-            if ((name is "x" or name is "y") and value < 0):
-                raise ValueError("{} must be >= 0".format(name))
+    def validation_method(self, name, value):
+        """validates the getters and setter methods"""
+        if not isinstance(value, int):
+             raise TypeError("{} must be an integer".format(name))
+        if ((name is "width") or (name is "height")) and value <= 0:
+            raise ValueError("{} must be > 0".format(name))
+        if ((name is "x" or name is "y") and value < 0):
+            raise ValueError("{} must be >= 0".format(name))
 
-        @property
-        def width(self):
-            """width getter"""
-            return self.__width
+    @property
+    def width(self):
+        """width getter"""
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            """width setter"""
-            self.validation_method("width", value)
-            self.__width = value
+    @width.setter
+    def width(self, value):
+        """width setter"""
+        self.validation_method("width", value)
+        self.__width = value
 
-        @property
-        def height(self):
-            """height getter"""
-            return self.__height
+    @property
+    def height(self):
+        """height getter"""
+        return self.__height
 
-        @height.setter
-        def height(self, value):
-            """height setter"""
-            self.validation_method('height', value)
-            self.__height = value
+    @height.setter
+    def height(self, value):
+        """height setter"""
+        self.validation_method('height', value)
+        self.__height = value
 
-        @property
-        def x(self):
-            """x getter"""
-            return self.__x
+    @property
+    def x(self):
+        """x getter"""
+        return self.__x
 
-        @x.setter
-        def x(self, value):
-            """x setter"""
-            self.validation_method('x', value)
-            self.__x = value
+    @x.setter
+    def x(self, value):
+        """x setter"""
+        self.validation_method('x', value)
+        self.__x = value
 
-        @property
-        def y(self):
-            """y getter"""
-            return self.__y
+    @property
+    def y(self):
+        """y getter"""
+        return self.__y
 
-        @y.setter
-        def y(self, value):
-            """y setter"""
-            self.validation_method('y', value)
-            self.__y = value
+    @y.setter
+    def y(self, value):
+        """y setter"""
+        self.validation_method('y', value)
+        self.__y = value
+
+    def area(self):
+        """area method"""
+        return (self.width * self.height)
